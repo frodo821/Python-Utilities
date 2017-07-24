@@ -63,6 +63,7 @@ class Stack:
         self.__stack.insert(0, self.__stack.pop)
     def Copy(self):
         cp = Stack(self.TYPE)
+        #参照回避 listのコンストラクタを呼んで参照を分ける
         cp.__stack = list(self.__stack)
         return cp
     def HasItem(self):
