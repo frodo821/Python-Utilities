@@ -60,7 +60,7 @@ class Stack:
             return self.__stack.pop()
         raise ReferenceError("Cannot pop from this stack, because this has no item.")
     def ROLL(self):
-        self.__stack.insert(0, self.__stack.pop)
+        self.__stack.insert(0, self.__stack.pop())
     def Copy(self):
         cp = Stack(self.TYPE)
         #参照回避 listのコンストラクタを呼んで参照を分ける
