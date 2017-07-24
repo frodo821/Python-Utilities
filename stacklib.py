@@ -1,4 +1,5 @@
 #-*-coding:utf-8;-*-
+#スタック用のlistオブジェクトラッパークラス
 
 class Stack:
     def __init__(self, T):
