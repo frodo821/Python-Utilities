@@ -2,6 +2,8 @@
 #スタック用のlistオブジェクトラッパークラス
 
 class Stack:
+    #T スタックに入れたいオブジェクトの型
+    #Pythonでジェネリック擬き
     def __init__(self, T):
         self.__stack = list()
         self.TYPE = T
