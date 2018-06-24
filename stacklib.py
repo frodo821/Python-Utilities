@@ -35,6 +35,10 @@ class Stack:
         return True
     def __ne__(self, other):
         return not self == other
+    def __iter__(self):
+        yield from self.__stack
+    def __len__(self):
+        return len(self.__stack)
     def __iadd__(self, elem):
         if type(elem) is self.TYPE:
             self.PUSH(elem)
@@ -71,5 +75,4 @@ class Stack:
     def GetType(self):
         return self.TYPE
     def GetItemCount(self):
-        return len(self.__stack)
-
+        return len(self)
